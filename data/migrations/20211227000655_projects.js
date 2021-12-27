@@ -4,7 +4,7 @@ exports.up = function(knex) {
         table.increments("project_id")
         table.text("project_name",128).unique().notNullable()
         table.text("project_description")
-        table.boolean("project_completed")
+        table.boolean("project_completed").notNullable().defaultTo(false)
     })
 };
 

@@ -4,7 +4,7 @@ exports.up = function(knex) {
         table.increments("task_id")
         table.text("task_description")
         table.text("task_notes")
-        table.boolean("task_completed")
+        table.boolean("task_completed").notNullable().defaultTo(false)
         table.integer("project_id").references("project_id").inTable("projects")
     })
 };
