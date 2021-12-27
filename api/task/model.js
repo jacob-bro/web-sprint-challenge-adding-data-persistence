@@ -3,9 +3,7 @@ const db = require("../../data/dbConfig.js")
 module.exports = {
     get,
     getById,
-    create,
-    update,
-    remove
+    create
 }
 
 async function get() {
@@ -22,9 +20,9 @@ async function create({task_description,task_notes,task_completed,project_id}) {
 }
 
 async function update() {
-    return
+    return 'not needed'
 }
 
 async function remove() {
-    return
+    return 'not needed'
 }
