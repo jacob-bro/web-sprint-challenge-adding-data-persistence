@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
+    "mu": "knex migrate:up",
+    "md": "knex migrate:down",
+    "ml": "knex migrate:latest",
+    "mr": "knex migrate:rollback",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent"
   },
   "repository": {

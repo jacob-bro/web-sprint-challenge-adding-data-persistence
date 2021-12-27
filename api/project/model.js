@@ -12,12 +12,13 @@ async function get() {
     return db("projects")
 }
 
-async function getById() {
-    return 
+async function getById(id) {
+    return db("projects").where("project_id", id).first()
 }
 
-async function create() {
-    return
+async function create({project_name,project_description,project_completed}) {
+  const [id] = await db("projects").insert({project_name,project_description,project_completed})
+  return getById(id) 
 }
 
 async function update() {
